@@ -65,7 +65,7 @@ module Analytico
 
       def post(endpoint, data=nil)
         unless production_env?
-          warn "%%% Analytico %%% Skipping while not in production. Would have sent (async: #{@@async ? 'on' : 'off' }): #{data.inspect}"
+          Rails.logger.warn "%%% Analytico %%% Skipping while not in production. Would have sent (async: #{@@async ? 'on' : 'off' }): #{data.inspect}"
           return nil
         end
         if @@async
@@ -79,7 +79,7 @@ module Analytico
         begin
           @@connection.post(endpoint, data)
         rescue
-          warn "%%% Analytico %%% There was an error communicating with Analytico"
+          Rails.logger.warn "%%% Analytico %%% There was an error communicating with Analytico"
         end
       end
 

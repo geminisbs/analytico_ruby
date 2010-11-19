@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{analytico}
-  s.version = "0.3.2"
+  s.version = "0.3.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mauricio Gomes"]
-  s.date = %q{2010-11-13}
+  s.date = %q{2010-11-18}
   s.description = %q{Ruby client for the Analytico impression and app metric tracking service.}
   s.email = %q{mgomes@geminisbs.com}
   s.extra_rdoc_files = [
